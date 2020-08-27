@@ -1,0 +1,98 @@
+@font-face {
+  font-family: yourFlames;
+  src: url('fonts/your_flames.otf');
+}
+
+html, body{
+    background-color: black;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+}
+
+#avail-sept20th, #bsow-call-out{
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#player{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30000;
+}
+
+#blackout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 20000;
+}
+
+#main-anim{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.socials{
+    z-index: 10000;
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 2vh;
+    right: 0;
+}
+
+.socials a img{
+    max-width: 60%;
+    height: auto;
+}
+
+#socials-mobile{
+    display: hidden;
+    visibility: hidden;
+}
+
+
+
+/***** mobile ******/
+
+@media (max-width: 767px) {
+
+    #main-anim{
+        padding-top: 25vh;
+        width: 100%;
+    }
+    
+    .socials{
+        display: none;
+    }
+    
+    #socials-mobile{
+        z-index: 10000;
+        padding-top: 60vh;
+        padding-left: 5vh;
+        padding-right: 5vh;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    #socials-mobile a img{
+        width: 30%;
+    }
+    
+}
